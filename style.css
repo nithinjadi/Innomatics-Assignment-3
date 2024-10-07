@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Grid Item Styling */
+.header, .content, .sign-up, .feature {
+    background-color: #d0e7ff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.header {
+    background-color: #a4d0ff;
+}
+
+.content {
+    background-color: #d0e7ff;
+}
+
+.sign-up {
+    background-color: #b3e5d0;
+}
+
+.feature1 {
+    background-color: #f9cb9c;
+}
+
+.feature2 {
+    background-color: #b6a3e6;
+}
+
+.feature3 {
+    background-color: #f7a8a6;
+}
+
+/* Mobile View (default) */
+.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+/* Tablet View */
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .header {
+        grid-column: span 2;
+    }
+    .content {
+        grid-column: span 2;
+    }
+    .sign-up {
+        grid-column: span 1;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+    }
+    .header {
+        grid-column: span 3;
+    }
+    .sign-up {
+        grid-column: span 3;
+    }
+    .content {
+        grid-column: span 3;
+    }
+}
